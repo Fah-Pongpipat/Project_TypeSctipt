@@ -1,6 +1,8 @@
 // โปรแกรมคำนวนเกรด
 function calculate(score: number): string {
-  if (score >= 80) {
+  if (score >= 85) {
+    return "A+";
+  } else if (score >= 80) {
     return "A";
   } else if (score >= 75) {
     return "B+";
@@ -18,7 +20,8 @@ function calculate(score: number): string {
     return "F";
   }
 }
-let listscore = [80, 51, 35, 69, 55, 71, 75, 64, 56];
+
+let listscore = [49, 50, 56, 60, 66, 70, 78, 80, 89, 90];
 for (var i in listscore) {
   console.log(`คะแนน ${listscore[i]} เกรดที่ได้ = ${calculate(listscore[i])}`);
 }
